@@ -3,14 +3,8 @@
     "name": "mobile_movie_app",
     "slug": "mobile_movie_app",
     "version": "1.0.0",
-    "orientation": "portrait",
-    "icon": "./assets/images/icon.png",
     "scheme": "mobilemovieapp",
-    "userInterfaceStyle": "automatic",
-    "newArchEnabled": true,
-    "ios": {
-      "supportsTablet": true
-    },
+    "orientation": "portrait", 
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/images/adaptive-icon.png",
