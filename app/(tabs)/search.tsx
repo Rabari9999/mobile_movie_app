@@ -1,5 +1,5 @@
 import { ActivityIndicator, FlatList, Image, StyleSheet, Text, View } from 'react-native'
-import React, { useEffect, useState } from 'react'
+import React, { use, useEffect, useState } from 'react'
 import MovieCard from '@/components/MovieCard'
 import { images } from '@/constants/images'
 import useFetch from '@/services/useFetch'
@@ -23,17 +23,19 @@ const[searchQuery,setSearchQuery] = useState('');
       const debouncing = setTimeout(async() =>{
         if(searchQuery.trim()){
           await loadMovies();
-
-           if(movies?.length>0 && movies?.[0]){
-              await updateSearchCount(searchQuery,movies[0]);
-           }
         }
         else{
           reset()
         }
-      },500)
+      },1000)
     return ()=> clearTimeout(debouncing);
     },[searchQuery])
+
+    useEffect(()=>{
+      if(movies?.length>0 && movies?.[0]){
+        updateSearchCount(searchQuery,movies[0]);
+      }
+    })
   return (
     <View className='flex-1 bg-primary'>
         <Image source={images.bg} className='flex-1 absolute w-full z-0 resizeMode="cover' />
