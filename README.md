@@ -1,50 +1,112 @@
-# Welcome to your Expo app 👋
+🎬 Full Stack React Native Movie App
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+A fully-featured Movie App built with React Native and Expo.
+This project demonstrates modern mobile development practices, including navigation, API integration, custom hooks, and responsive design.
+🚀 Features
 
-## Get started
+    Browse trending and latest movies
 
-1. Install dependencies
+    Search for movies by title
 
-   ```bash
-   npm install
-   ```
+    View detailed movie information
 
-2. Start the app
+    Responsive UI with custom navigation
 
-   ```bash
-   npx expo start
-   ```
+    Data fetching from TMDB API
 
-In the output, you'll find options to open the app in a
+    Built with Expo for easy development and deployment
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
+📸 Screenshots
+<!-- Add your own screenshots here --> <p align="center"> <img src="screenshots/home.png" width="200" /> <img src="screenshots/details.png" width="200" /> <img src="screenshots/search.png" width="200" /> </p>
+🛠️ Tech Stack
 
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
+    React Native
 
-## Get a fresh project
+    Expo
 
-When you're ready, run:
+    React Navigation
 
-```bash
-npm run reset-project
-```
+    TMDB API
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+    Tailwind CSS (NativeWind) for styling
 
-## Learn more
+📦 Getting Started
+Prerequisites
 
-To learn more about developing your project with Expo, look at the following resources:
+    Node.js (v16+ recommended)
 
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
+    Expo CLI
 
-## Join the community
+    Yarn or npm
 
-Join our community of developers creating universal apps.
+    TMDB API Key (sign up here)
 
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+Installation
+
+    Clone the repository
+
+bash
+git clone https://github.com/yourusername/your-movie-app.git
+cd your-movie-app
+
+Install dependencies
+
+bash
+yarn install
+# or
+npm install
+
+Set up environment variables
+
+Create a .env file in the root directory and add your TMDB API key:
+
+text
+TMDB_API_KEY=your_tmdb_api_key_here
+
+Start the development server
+
+    bash
+    expo start
+
+    Run on your device
+
+        Use the Expo Go app (iOS/Android) to scan the QR code.
+
+        Or run on an emulator with i (iOS) or a (Android) in the Expo CLI.
+
+📝 Project Structure
+
+text
+.
+├── assets/             # Images, icons, etc.
+├── components/         # Reusable components
+├── hooks/              # Custom React hooks
+├── navigation/         # Navigation configuration
+├── screens/            # App screens (Home, Search, Details, etc.)
+├── utils/              # Utility functions
+├── App.js              # Entry point
+├── app.json            # Expo config
+└── ...
+
+🔑 API Reference
+
+    This app uses The Movie Database (TMDB) API for fetching movie data.
+
+    You must provide your own API key in the .env file.
+
+🚢 Deployment
+
+To create a production build:
+
+bash
+expo build:android   # For Android APK/AAB
+expo build:ios       # For iOS (requires MacOS)
+
+For more deployment options, see Expo Deployment Docs.
+🙏 Acknowledgements
+
+    TMDB API
+
+    Expo
+
+Happy Coding! 🎉
